@@ -31,7 +31,7 @@ const getAllUser = async (req, res) => {
     const cacheUser = await RedisClient.get("users");
     if (cacheUser) {
       return res.status(200).json({
-        message: "from cache",
+        message: "From cache",
         data: JSON.parse(cacheUser),
       });
     }
